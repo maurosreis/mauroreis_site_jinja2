@@ -1,55 +1,75 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section>
+  <h2>Sobre Mim</h2>
+  <p>Sou <strong>Mauro Sandro dos Reis</strong>, doutor em Eletrônica de Potência
+    pelo Programa de Engenharia Elétrica da <a href="https://coppe.ufrj.br/programas/engenharia-eletrica/" target="_blank" rel="noopener noreferrer">COPPE/UFRJ</a> (PEE), 
+    professor no curso de Engenharia Elétrica do <a href="https://www.cefet-rj.br/" target="_blank" rel="noopener noreferrer"> CEFET/RJ</a> e pesquisador no Laboratório de Fontes Alternativas de Energia <a href="https://lafaerj.com.br/" target="_blank" rel="noopener noreferrer">(LAFAE)</a>.</p>
+
+  <p>Tenho mais de 15 anos de experiência em eletrônica de potência, energias renováveis, automação, controle e educação tecnológica. Desde 2006, atuo em projetos de Pesquisa e Desenvolvimento (P&D) no setor de energia, com passagem pelo Laboratório de Eletrônica de Medidas e Tensão (LEMT) e, atualmente, conduzindo pesquisas aplicadas no LAFAE.</p>
+
+  <p>Minha trajetória é marcada pelo compromisso com a eficiência energética, o desenvolvimento de soluções inovadoras para a indústria e a formação de profissionais na área técnica e de engenharia.</p>
+
+</section>
+
+
 <section id="ensino">
   <h2>Ensino</h2>
-  <p>Desenvolvimento de conteúdo para disciplinas de eletrônica, práticas computacionais, e participação em atividades pedagógicas voltadas para formação técnica e superior.
-    <strong><a href="{{ nav_prefix }}ensino/index.html">Saiba mais sobre minhas atividades de ensino...</a></strong>
-  </p>
+  <p>Atuo como docente nos cursos de <strong>Engenharia Elétrica</strong>, <strong>Engenharia Eletrônica</strong>, <strong>Engenharia de Automação</strong> e 
+    <strong>Engenharia de Produção</strong>, ministrando disciplinas como <strong>Medidas Elétricas</strong>, <strong>Práticas Computacionais</strong> e 
+    <strong>Energia Elétrica</strong>. Também sou o responsável pela coordenação da disciplina de <strong>Eletricidade Aplicada</strong> na modalidade de 
+    Ensino a Distância (EAD) para o curso de Engenharia de Produção.</p>
+  <p>Minha abordagem pedagógica combina teoria sólida com aplicações práticas, metodologias ativas e uso de tecnologias como Arduino, 
+    simuladores e ambientes virtuais de aprendizagem. Tenho experiência com ensino superior, presencial, híbrido e online.</p>
+  <p><a href="{{ nav_prefix }}ensino/index.html"><strong>Saiba mais sobre minhas atividades de ensino...</strong></a></p>
 </section>
 
 <section id="pesquisa">
   <h2>Pesquisa</h2>
-  <p>Mauro é pesquisador em sistemas de energia, com foco em eletrônica de potência, microrredes e colheita de energia. Atua no desenvolvimento de soluções tecnológicas para eficiência energética e participa de projetos acadêmicos e industriais. Possui experiência com simulações no PSIM, NGSpice e desenvolvimento de hardware com Arduino e DSPs.
-    <strong><a href="{{ nav_prefix }}pesquisa/index.html">Veja mais sobre minhas pesquisas...</a></strong>
-  </p>
+  <p>Participo de projetos de P&D em colheita de energia, eletrônica de potência embarcada e microrredes inteligentes. Trabalho com simulações em PSIM e NGSpice, além do desenvolvimento de protótipos com Arduino e DSPs.</p>
+  <p><strong><a href="{{ nav_prefix }}pesquisa/index.html">Veja mais sobre minhas pesquisas...</a></strong></p>
 </section>
+
+<section id="extensao">
+  <h2>Extensão Universitária</h2>
+  <p>Minha atuação em extensão universitária tem como foco a aplicação do conhecimento técnico e científico em benefício direto da sociedade, especialmente em contextos de vulnerabilidade social, transição energética e sustentabilidade. Acredito na extensão como espaço de escuta, colaboração e construção coletiva de soluções reais.</p>
+
+  <p>Atualmente coordeno ou participo dos seguintes projetos:</p>
+  <ul>
+    <li><strong>BioCamorim</strong> – Produção de biofertilizantes com base em microrganismos eficientes (2023–2024), promovendo agricultura regenerativa e fortalecimento de práticas agroecológicas em territórios tradicionais.</li>
+    <li><strong>Microrredes como Ferramentas de Desenvolvimento Humano e Social</strong> – Construção de uma metodologia participativa para o projeto de microrrredes em comunidades isoladas, com foco em autonomia energética e transformação social (em andamento).</li>
+    <li><strong>Triciclos Elétricos em Paquetá</strong> – Desenvolvimento de uma tecnologia social de mobilidade urbana voltada para a transição energética e inclusão produtiva, construindo um modelo colaborativo de sustentabilidade regional (em andamento).</li>
+  </ul>
+
+  <p>Essas iniciativas fortalecem o papel social da engenharia, promovendo o desenvolvimento regional com base em tecnologias apropriadas, participação comunitária e inovação com impacto direto na vida das pessoas.</p>
+
+  <p><a href="{{ nav_prefix }}extensao/index.html"><strong>Conheça meus projetos de extensão em detalhe...</strong></a></p>
+</section>
+
 
 <section>
   <h2>Áreas de Interesse</h2>
   <ul>
     <li><a href="{{ nav_prefix }}eletronica-potencia.html">Conversores de Potência (DC-DC, DC-AC, MMC)</a></li>
-    <li>Microrredes Inteligentes (Smart Microgrids)</li>
-    <li>Processamento de Sinais (DSPs)</li>
-    <li>Colheita de Energia (Energy Harvesting)</li>
+    <li>Microrredes Inteligentes</li>
+    <li>Processamento de Sinais com DSPs</li>
+    <li>Energy Harvesting</li>
     <li>Automação e Controle</li>
-    <li>Educação Tecnológica e Plataformas Virtuais</li>
+    <li>Educação Tecnológica</li>
   </ul>
-</section>
-
-<section id="extensao">
-  <h2>Extensão</h2>
-  <ul>
-    <li>Controle de conversores para colheita de energia em plataformas offshore (UEP)</li>
-    <li>Desenvolvimento de apostila 'Práticas Computacionais I' com foco em Arduino</li>
-    <li>Microrrede do LAFAE - Integração e Controle de Fontes e Cargas</li>
-    <li>Fábrica Doce Sem Alergia - automação de processos e layout produtivo</li>
-    <li>Projeto Conecta CEFET - aplicativo de integração estudantil</li>
-  </ul>
-  <p><strong><a href="{{ nav_prefix }}extensao/index.html">Conheça meus projetos de extensão...</a></strong></p>
 </section>
 
 <section id="contato">
   <h2>Contato</h2>
-  <p>📧 <strong>Email:</strong> mauro@mauroreis.app</p>
-  <p>📍 <strong>Local:</strong> Rio de Janeiro, Brasil</p>
+  <p>Email: <a href="mailto:mauro@mauroreis.app">mauro@mauroreis.app</a></p>
+  <p><strong>Local:</strong> Rio de Janeiro, Brasil</p>
   <p>
     <strong>LinkedIn:</strong>
-    <a href="https://www.linkedin.com/in/maurosreis/" target="_blank" rel="noopener noreferrer">linkedin.com/in/maurosreis</a><br>
+    <a href="https://www.linkedin.com/in/maurosreis/" target="_blank">linkedin.com/in/maurosreis</a><br>
     <strong>GitHub:</strong>
-    <a href="https://github.com/maurosreis" target="_blank" rel="noopener noreferrer">github.com/maurosreis</a>
+    <a href="https://github.com/maurosreis" target="_blank">github.com/maurosreis</a>
   </p>
-  <p><strong><a href="{{ nav_prefix }}contato/index.html">Informações de contato detalhadas...</a></strong></p>
 </section>
 
 {% endblock %}
