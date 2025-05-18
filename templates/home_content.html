@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="ensino">
+  <h2>Ensino</h2>
+  <p>Desenvolvimento de conteúdo para disciplinas de eletrônica, práticas computacionais, e participação em atividades pedagógicas voltadas para formação técnica e superior.
+    <strong><a href="{{ nav_prefix }}ensino/index.html">Saiba mais sobre minhas atividades de ensino...</a></strong>
+  </p>
+</section>
+
+<section id="pesquisa">
+  <h2>Pesquisa</h2>
+  <p>Mauro é pesquisador em sistemas de energia, com foco em eletrônica de potência, microrredes e colheita de energia. Atua no desenvolvimento de soluções tecnológicas para eficiência energética e participa de projetos acadêmicos e industriais. Possui experiência com simulações no PSIM, NGSpice e desenvolvimento de hardware com Arduino e DSPs.
+    <strong><a href="{{ nav_prefix }}pesquisa/index.html">Veja mais sobre minhas pesquisas...</a></strong>
+  </p>
+</section>
+
+<section>
+  <h2>Áreas de Interesse</h2>
+  <ul>
+    <li><a href="{{ nav_prefix }}eletronica-potencia.html">Conversores de Potência (DC-DC, DC-AC, MMC)</a></li>
+    <li>Microrredes Inteligentes (Smart Microgrids)</li>
+    <li>Processamento de Sinais (DSPs)</li>
+    <li>Colheita de Energia (Energy Harvesting)</li>
+    <li>Automação e Controle</li>
+    <li>Educação Tecnológica e Plataformas Virtuais</li>
+  </ul>
+</section>
+
+<section id="extensao">
+  <h2>Extensão</h2>
+  <ul>
+    <li>Controle de conversores para colheita de energia em plataformas offshore (UEP)</li>
+    <li>Desenvolvimento de apostila 'Práticas Computacionais I' com foco em Arduino</li>
+    <li>Microrrede do LAFAE - Integração e Controle de Fontes e Cargas</li>
+    <li>Fábrica Doce Sem Alergia - automação de processos e layout produtivo</li>
+    <li>Projeto Conecta CEFET - aplicativo de integração estudantil</li>
+  </ul>
+  <p><strong><a href="{{ nav_prefix }}extensao/index.html">Conheça meus projetos de extensão...</a></strong></p>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>📧 <strong>Email:</strong> mauro@mauroreis.app</p>
+  <p>📍 <strong>Local:</strong> Rio de Janeiro, Brasil</p>
+  <p>
+    <strong>LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/maurosreis/" target="_blank" rel="noopener noreferrer">linkedin.com/in/maurosreis</a><br>
+    <strong>GitHub:</strong>
+    <a href="https://github.com/maurosreis" target="_blank" rel="noopener noreferrer">github.com/maurosreis</a>
+  </p>
+  <p><strong><a href="{{ nav_prefix }}contato/index.html">Informações de contato detalhadas...</a></strong></p>
+</section>
+
+{% endblock %}

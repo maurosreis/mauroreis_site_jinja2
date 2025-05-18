@@ -1,0 +1,24 @@
+# Ambiente virtual
+venv/
+
+# Cache e arquivos temporários
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tmp
+*.log
+
+# Backup de editores
+*.swp
+*.bak
+*.old
+
+# Arquivos do VSCode
+.vscode/
+
+# Arquivos compactados
+*.zip
+
+# Outras pastas geradas
+public_html/

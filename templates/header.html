@@ -1,0 +1,20 @@
+{% if is_home %}
+<header class="perfil-container">
+  <img src="{{ assets_prefix }}img/foto-perfil-mauroreis.webp" alt="Foto de Mauro" class="foto-perfil">
+  <div class="perfil-info">
+    <h1>Mauro Sandro dos Reis</h1>
+    <p>Pesquisador, Professor e Engenheiro | <a href="{{ nav_prefix }}eletronica-potencia.html">Eletrônica de Potência</a></p>
+    <p>Email: mauro@mauroreis.app</p>
+  </div>
+</header>
+{% else %}
+<header>
+  <h1>{{ page_header_title }}</h1>
+</header>
+{% endif %}
+<nav>
+  <a href="{{ nav_prefix }}index.html" {% if current_page == 'home' %}class="active"{% endif %}>Início</a>
+  <a href="{{ nav_prefix }}ensino/index.html" {% if current_page == 'ensino' %}class="active"{% endif %}>Ensino</a>
+  <a href="{{ nav_prefix }}pesquisa/index.html" {% if current_page == 'pesquisa' %}class="active"{% endif %}>Pesquisa</a>
+  <a href="{{ nav_prefix }}extensao/index.html" {% if current_page == 'extensao' %}class="active"{% endif %}>Extensão</a>
+</nav>
