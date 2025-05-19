@@ -2,15 +2,38 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page_title }}</title>
-  <link rel="stylesheet" href="{{ css_path }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{% block page_title %}Mauro Sandro dos Reis — Pesquisador e Professor{% endblock %}</title>
+  <meta name="description" content="{% block page_description %}Site pessoal de Mauro Sandro dos Reis, pesquisador em eletrônica de potência, energias renováveis e controle.{% endblock %}">
+  <meta name="author" content="Mauro Sandro dos Reis" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="{% block page_keywords %}engenharia, energia renovável, eletrônica de potência, ensino, pesquisa{% endblock %}">
+  <link rel="canonical" href="https://mauroreis.app{% block page_path %}/{% endblock %}" />
+  <meta name="theme-color" content="#003366" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{% block og_title %}{% endblock %}" />
+  <meta property="og:description" content="{% block og_description %}{% endblock %}" />
+  <meta property="og:url" content="https://mauroreis.app{% block og_path %}{% endblock %}" />
+  <meta property="og:image" content="https://mauroreis.app/{{ assets_prefix }}img/foto-perfil-mauroreis.webp" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% block twitter_title %}{% endblock %}" />
+  <meta name="twitter:description" content="{% block twitter_description %}{% endblock %}" />
+  {# twitter:url geralmente não é necessário se og:url estiver definido, mas pode ser adicionado como {% block twitter_url %}{% endblock %} se desejado #}
+  <meta name="twitter:image" content="https://mauroreis.app/{{ assets_prefix }}img/foto-perfil-mauroreis.webp" />
+
+  <link rel="icon" href="{{ nav_prefix }}favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ css_path }}" />
 </head>
 <body>
   {% include "header.html" %}
+
   <main>
     {% block content %}{% endblock %}
   </main>
+
   {% include "footer.html" %}
 </body>
 </html>

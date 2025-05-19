@@ -1,6 +1,28 @@
 {% extends "base.html" %}
-{% block content %}
 
+{# Define os metadados principais para esta página #}
+{% block page_title %}Início | Mauro Sandro dos Reis{% endblock %}
+{% block page_description %}Site pessoal de Mauro Sandro dos Reis, professor do CEFET/RJ e pesquisador no LAFAE, com atuação em energias renováveis, ensino, controle e eletrônica de potência.{% endblock %}
+{% block page_path %}/{% endblock %}
+{% block page_keywords %}engenharia, energia renovável, ensino, eletrônica de potência, microrredes{% endblock %}
+
+{# 
+  Faz Open Graph e Twitter herdarem dos metadados principais.
+  Se quiser um valor diferente para OG/Twitter para esta página específica,
+  simplesmente altere o conteúdo dentro do bloco correspondente abaixo.
+  Por exemplo, para um título OG diferente: {% block og_title %}Título OG Específico para a Home{% endblock %}
+#}
+{% block og_title %}{{ self.page_title() }}{% endblock %}
+{% block og_description %}{{ self.page_description() }}{% endblock %}
+{% block og_path %}{{ self.page_path() }}{% endblock %}
+
+{% block twitter_title %}{{ self.page_title() }}{% endblock %}
+{% block twitter_description %}{{ self.page_description() }}{% endblock %}
+{# Se também tiver um bloco twitter_path em base.html, pode adicionar: #}
+{# {% block twitter_path %}{{ self.page_path() }}{% endblock %} #}
+
+
+{% block content %}
 <section>
   <h2>Sobre Mim</h2>
   <p>Sou <strong>Mauro Sandro dos Reis</strong>, doutor em Eletrônica de Potência
@@ -10,9 +32,7 @@
   <p>Tenho mais de 15 anos de experiência em eletrônica de potência, energias renováveis, automação, controle e educação tecnológica. Desde 2006, atuo em projetos de Pesquisa e Desenvolvimento (P&D) no setor de energia, com passagem pelo Laboratório de Eletrônica de Medidas e Tensão (LEMT) e, atualmente, conduzindo pesquisas aplicadas no LAFAE.</p>
 
   <p>Minha trajetória é marcada pelo compromisso com a eficiência energética, o desenvolvimento de soluções inovadoras para a indústria e a formação de profissionais na área técnica e de engenharia.</p>
-
 </section>
-
 
 <section id="ensino">
   <h2>Ensino</h2>
@@ -28,7 +48,7 @@
 <section id="pesquisa">
   <h2>Pesquisa</h2>
   <p>Participo de projetos de P&D em colheita de energia, eletrônica de potência embarcada e microrredes inteligentes. Trabalho com simulações em PSIM e NGSpice, além do desenvolvimento de protótipos com Arduino e DSPs.</p>
-  <p><strong><a href="{{ nav_prefix }}pesquisa/index.html">Veja mais sobre minhas pesquisas...</a></strong></p>
+  <p><strong><a href="{{ nav_prefix }}pesquisa/index.html">Veja mais sobre minhas pesquisas...</strong></a></p>
 </section>
 
 <section id="extensao">
@@ -46,7 +66,6 @@
 
   <p><a href="{{ nav_prefix }}extensao/index.html"><strong>Conheça meus projetos de extensão em detalhe...</strong></a></p>
 </section>
-
 
 <section>
   <h2>Áreas de Interesse</h2>
@@ -66,10 +85,9 @@
   <p><strong>Local:</strong> Rio de Janeiro, Brasil</p>
   <p>
     <strong>LinkedIn:</strong>
-    <a href="https://www.linkedin.com/in/maurosreis/" target="_blank">linkedin.com/in/maurosreis</a><br>
+    <a href="https://www.linkedin.com/in/maurosreis/" target="_blank" rel="noopener noreferrer">linkedin.com/in/maurosreis</a><br>
     <strong>GitHub:</strong>
-    <a href="https://github.com/maurosreis" target="_blank">github.com/maurosreis</a>
+    <a href="https://github.com/maurosreis" target="_blank" rel="noopener noreferrer">github.com/maurosreis</a>
   </p>
 </section>
-
 {% endblock %}
