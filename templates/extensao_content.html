@@ -1,7 +1,49 @@
 {% extends "base.html" %}
+
+{# Define os metadados principais para esta página #}
+{% block page_title %}Extensão Universitária | Mauro Sandro dos Reis{% endblock %}
+{% block page_description %}Projetos de extensão universitária coordenados ou com participação de Mauro S. Reis, focados na aplicação de conhecimento em benefício da sociedade, transição energética e sustentabilidade.{% endblock %}
+{% block page_path %}/extensao/{% endblock %}
+{% block page_keywords %}extensão universitária, projetos sociais, tecnologia social, sustentabilidade, CEFET/RJ, BioCamorim, Microrredes, Triciclos Elétricos{% endblock %}
+
+{# Faz Open Graph e Twitter herdarem dos metadados principais #}
+{% block og_title %}{{ self.page_title() }}{% endblock %}
+{% block og_description %}{{ self.page_description() }}{% endblock %}
+{% block og_path %}{{ self.page_path() }}{% endblock %}
+
+{% block twitter_title %}{{ self.page_title() }}{% endblock %}
+{% block twitter_description %}{{ self.page_description() }}{% endblock %}
+
 {% block content %}
 <section>
-  <h2>Extensão</h2>
-  <p>Projetos de extensão universitária.</p>
+  <h2>Extensão Universitária</h2>
+  <p>A extensão universitária é, para mim, uma via de mão dupla essencial, onde o conhecimento académico encontra as necessidades da sociedade, gerando aprendizado mútuo e impacto transformador. Procuro envolver-me em projetos que aplicam a engenharia e a tecnologia para promover o desenvolvimento sustentável, a inclusão social e a melhoria da qualidade de vida.</p>
+
+  <h3>Projetos em Destaque:</h3>
+  <ul>
+    <li>
+      <strong>BioCamorim – Produção de Biofertilizantes (2023–2024):</strong>
+      <p>Coordenação de projeto focado na produção de biofertilizantes a partir de microrganismos eficientes. Esta iniciativa visa promover práticas de agricultura regenerativa, fortalecer a agroecologia em territórios tradicionais e contribuir para a segurança alimentar e a sustentabilidade ambiental na região de Camorim, RJ.</p>
+    </li>
+    <li>
+      <strong>Microrredes como Ferramentas de Desenvolvimento Humano e Social (em andamento):</strong>
+      <p>Participação no desenvolvimento de uma metodologia participativa para o projeto e implementação de microrredes em comunidades isoladas ou vulneráveis. O projeto busca não apenas fornecer acesso à energia, mas também promover a autonomia energética, o desenvolvimento local e a transformação social através da cocriação de soluções energéticas.</p>
+    </li>
+    <li>
+      <strong>Triciclos Elétricos em Paquetá (em andamento):</strong>
+      <p>Desenvolvimento de uma tecnologia social de mobilidade urbana sustentável para a Ilha de Paquetá, RJ. O projeto envolve a adaptação e construção de triciclos elétricos, considerando as especificidades locais, e visa a transição energética no transporte, a inclusão produtiva de operadores locais e a criação de um modelo colaborativo de sustentabilidade regional.</p>
+    </li>
+  </ul>
+
+  <h3>Outras Iniciativas Anteriores:</h3>
+  <ul>
+    <li>Controlo de conversores para colheita de energia em plataformas offshore (UEP).</li>
+    <li>Desenvolvimento da apostila 'Práticas Computacionais I' com foco em Arduino, utilizada em cursos técnicos e de engenharia.</li>
+    <li>Microrrede do LAFAE - Integração e Controlo de Fontes e Cargas.</li>
+    <li>Fábrica Doce Sem Alergia - automação de processos e layout produtivo para uma iniciativa de economia solidária.</li>
+    <li>Projeto Conecta CEFET - desenvolvimento de um aplicativo para integração estudantil.</li>
+  </ul>
+
+  <p>Acredito que estes projetos fortalecem o papel social da universidade e da engenharia, demonstrando como o conhecimento técnico-científico pode ser uma ferramenta poderosa para enfrentar desafios sociais e ambientais complexos.</p>
 </section>
 {% endblock %}

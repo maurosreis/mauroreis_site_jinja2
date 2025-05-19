@@ -1,7 +1,39 @@
 {% extends "base.html" %}
+
+{# Define os metadados principais para esta página #}
+{% block page_title %}Ensino | Mauro Sandro dos Reis{% endblock %}
+{% block page_description %}Detalhes sobre as atividades de ensino de Mauro S. Reis, incluindo disciplinas ministradas no CEFET/RJ, desenvolvimento de material didático e abordagem pedagógica em engenharia elétrica e eletrônica.{% endblock %}
+{% block page_path %}/ensino/{% endblock %}
+{% block page_keywords %}ensino, engenharia elétrica, eletrônica, CEFET/RJ, práticas computacionais, medidas elétricas, EAD{% endblock %}
+
+{# Faz Open Graph e Twitter herdarem dos metadados principais #}
+{% block og_title %}{{ self.page_title() }}{% endblock %}
+{% block og_description %}{{ self.page_description() }}{% endblock %}
+{% block og_path %}{{ self.page_path() }}{% endblock %}
+
+{% block twitter_title %}{{ self.page_title() }}{% endblock %}
+{% block twitter_description %}{{ self.page_description() }}{% endblock %}
+
 {% block content %}
 <section>
   <h2>Ensino</h2>
-  <p>Conteúdo da página de ensino. Em breve mais informações.</p>
+  <p>Como docente no <a href="https://www.cefet-rj.br/" target="_blank" rel="noopener noreferrer">CEFET/RJ</a>, dedico-me à formação de futuros engenheiros e técnicos, partilhando conhecimento e fomentando o pensamento crítico nas áreas de Engenharia Elétrica, Eletrónica, Automação e Produção.</p>
+  
+  <h3>Disciplinas Atuais e Anteriores:</h3>
+  <ul>
+    <li><strong>Medidas Elétricas:</strong> Abordagem de técnicas e instrumentos para medição de grandezas elétricas, análise de erros e calibração.</li>
+    <li><strong>Práticas Computacionais:</strong> Introdução à programação com foco em Arduino e Python para solução de problemas de engenharia e desenvolvimento de projetos práticos.</li>
+    <li><strong>Energia Elétrica (Engenharia de Produção):</strong> Fundamentos de sistemas elétricos, geração, transmissão, distribuição e utilização eficiente da energia elétrica.</li>
+    <li><strong>Eletricidade Aplicada (EAD - Engenharia de Produção):</strong> Coordenação e docência da disciplina em modalidade a distância, cobrindo circuitos elétricos e instalações.</li>
+    <li>Outras disciplinas incluem Eletrônica Analógica, Eletrônica Digital e Princípios de Eletrônica de Potência.</li>
+  </ul>
+
+  <h3>Abordagem Pedagógica:</h3>
+  <p>Procuro integrar teoria e prática através de metodologias ativas, projetos, estudos de caso e o uso de ferramentas computacionais e laboratoriais. O objetivo é desenvolver nos alunos não apenas o conhecimento técnico, mas também competências essenciais como resolução de problemas, trabalho em equipa e aprendizagem contínua.</p>
+  
+  <h3>Material Didático e Recursos:</h3>
+  <p>Desenvolvo e disponibilizo materiais didáticos próprios, incluindo apostilas (como a de "Práticas Computacionais I com foco em Arduino"), guias de laboratório, simulações e videoaulas. Acredito na importância de recursos acessíveis e adaptados às necessidades dos estudantes.</p>
+  
+  <p><em>Mais informações sobre projetos pedagógicos, orientações e publicações na área de educação em engenharia serão adicionadas em breve.</em></p>
 </section>
 {% endblock %}

@@ -1,7 +1,31 @@
 {% extends "base.html" %}
+
+{# Define os metadados principais para esta página #}
+{% block page_title %}Eletrônica de Potência | Mauro Sandro dos Reis{% endblock %}
+{% block page_description %}Aplicações e tópicos avançados em eletrônica de potência, incluindo conversores de potência (DC-DC, DC-AC, MMC), processamento de sinais com DSPs e desenvolvimento de microrredes inteligentes.{% endblock %}
+{% block page_path %}/eletronica-potencia.html{% endblock %}
+{% block page_keywords %}eletrônica de potência, conversores, DSPs, microrredes, smart grids, MMC, DC-DC, DC-AC{% endblock %}
+
+{# Faz Open Graph e Twitter herdarem dos metadados principais #}
+{% block og_title %}{{ self.page_title() }}{% endblock %}
+{% block og_description %}{{ self.page_description() }}{% endblock %}
+{% block og_path %}{{ self.page_path() }}{% endblock %}
+
+{% block twitter_title %}{{ self.page_title() }}{% endblock %}
+{% block twitter_description %}{{ self.page_description() }}{% endblock %}
+
 {% block content %}
 <section>
   <h2>Eletrônica de Potência</h2>
-  <p>Aplicações e tópicos relacionados a conversores, DSPs e microrredes.</p>
+  <p>Bem-vindo à secção de Eletrônica de Potência. Aqui encontrará informações detalhadas sobre as minhas áreas de especialização e interesse, incluindo:</p>
+  <ul>
+    <li><strong>Conversores de Potência:</strong> Análise, projeto e controlo de diversos tipos de conversores estáticos, como conversores DC-DC (Buck, Boost, Buck-Boost, SEPIC, Cuk, Full-Bridge), conversores DC-AC (inversores monofásicos e trifásicos, MLI - Modulação por Largura de Impulso) e conversores modulares multinível (MMC).</li>
+    <li><strong>Processamento de Sinais com DSPs:</strong> Aplicação de Processadores Digitais de Sinais (DSPs) para o controlo em tempo real de conversores de potência, implementação de algoritmos avançados de controlo, estimação de parâmetros e monitorização de sistemas de energia.</li>
+    <li><strong>Microrredes Inteligentes (Smart Microgrids):</strong> Conceção, operação e controlo de microrredes, integração de fontes de energia renovável (solar fotovoltaica, eólica), sistemas de armazenamento de energia (baterias) e gestão de cargas. Foco em microrredes autónomas e conectadas à rede.</li>
+    <li><strong>Colheita de Energia (Energy Harvesting):</strong> Investigação e desenvolvimento de sistemas para capturar e converter pequenas quantidades de energia do ambiente (vibrações, RF, térmica, solar) em energia elétrica utilizável para alimentar dispositivos de baixo consumo.</li>
+    <li><strong>Qualidade de Energia:</strong> Estudo de harmónicos, fator de potência, distorção harmónica total (THD) e desenvolvimento de soluções para mitigação de problemas de qualidade de energia, como filtros ativos e passivos.</li>
+  </ul>
+  <p>Esta área é fundamental para o avanço de tecnologias em energias renováveis, veículos elétricos, eficiência energética e automação industrial. Continuo a explorar novas fronteiras e aplicações práticas para contribuir para um futuro energético mais sustentável e eficiente.</p>
+  <p><em>Conteúdo adicional, projetos específicos e publicações relacionadas serão adicionados em breve.</em></p>
 </section>
 {% endblock %}

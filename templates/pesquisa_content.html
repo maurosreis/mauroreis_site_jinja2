@@ -1,7 +1,51 @@
 {% extends "base.html" %}
+
+{# Define os metadados principais para esta página #}
+{% block page_title %}Pesquisa | Mauro Sandro dos Reis{% endblock %}
+{% block page_description %}Linhas de pesquisa e projetos de P&D de Mauro S. Reis, com foco em eletrônica de potência, sistemas de energia, microrredes inteligentes, colheita de energia (energy harvesting) e controlo de sistemas.{% endblock %}
+{% block page_path %}/pesquisa/{% endblock %}
+{% block page_keywords %}pesquisa, P&D, eletrônica de potência, sistemas de energia, microrredes, energy harvesting, LAFAE, COPPE/UFRJ{% endblock %}
+
+{# Faz Open Graph e Twitter herdarem dos metadados principais #}
+{% block og_title %}{{ self.page_title() }}{% endblock %}
+{% block og_description %}{{ self.page_description() }}{% endblock %}
+{% block og_path %}{{ self.page_path() }}{% endblock %}
+
+{% block twitter_title %}{{ self.page_title() }}{% endblock %}
+{% block twitter_description %}{{ self.page_description() }}{% endblock %}
+
 {% block content %}
 <section>
-  <h2>Pesquisa</h2>
-  <p>Projetos de pesquisa em andamento e publicações.</p>
+  <h2>Pesquisa e Desenvolvimento</h2>
+  <p>A minha atividade de investigação científica e desenvolvimento tecnológico centra-se na busca por soluções inovadoras e eficientes para os desafios contemporâneos no setor de energia e sistemas eletrónicos. Como pesquisador no <a href="https://lafaerj.com.br/" target="_blank" rel="noopener noreferrer">LAFAE (Laboratório de Fontes Alternativas de Energia)</a> e com formação de doutoramento no <a href="https://coppe.ufrj.br/programas/engenharia-eletrica/" target="_blank" rel="noopener noreferrer">PEE COPPE/UFRJ</a>, tenho trabalhado em diversas frentes:</p>
+
+  <h3>Principais Linhas de Pesquisa:</h3>
+  <ul>
+    <li>
+      <strong>Eletrônica de Potência Aplicada a Energias Renováveis:</strong>
+      Desenvolvimento e controlo de conversores estáticos (DC-DC, DC-AC) para otimizar a integração de fontes renováveis (solar, eólica) em sistemas de energia e microrredes. Inclui o estudo de topologias avançadas, como conversores modulares multinível (MMC).
+    </li>
+    <li>
+      <strong>Microrredes Inteligentes e Resilientes:</strong>
+      Projeto, modelagem, simulação e controlo de microrredes (isoladas e conectadas à rede principal), com foco na gestão de energia, estabilidade, proteção e integração de múltiplos recursos energéticos distribuídos (geração, armazenamento, cargas controláveis).
+    </li>
+    <li>
+      <strong>Colheita de Energia (Energy Harvesting):</strong>
+      Investigação de técnicas e desenvolvimento de circuitos eletrónicos para capturar energia de fontes ambientais de baixa potência (vibrações, RF, luz, calor) e convertê-la em energia elétrica para alimentar sensores sem fio, dispositivos IoT e eletrónica vestível.
+    </li>
+    <li>
+      <strong>Controlo Digital de Sistemas de Potência:</strong>
+      Aplicação de processadores digitais de sinais (DSPs) e microcontroladores para a implementação de estratégias de controlo avançadas, em tempo real, para conversores de potência e sistemas de energia, visando melhorar o desempenho, a eficiência e a fiabilidade.
+    </li>
+    <li>
+      <strong>Eletrônica de Potência Embarcada:</strong>
+      Desenvolvimento de soluções compactas e eficientes de eletrônica de potência para aplicações específicas, como sistemas de tração elétrica, carregadores de baterias e fontes de alimentação para equipamentos eletrónicos.
+    </li>
+  </ul>
+
+  <h3>Ferramentas e Metodologias:</h3>
+  <p>No desenvolvimento dos meus projetos, utilizo extensivamente ferramentas de simulação como PSIM, PLECS e NGSpice para análise e validação de circuitos e sistemas. Tenho também experiência prática no desenvolvimento de hardware, desde a conceção de placas de circuito impresso (PCBs) até à prototipagem e teste de conversores e sistemas de controlo com Arduino, DSPs (principalmente da Texas Instruments) e FPGAs.</p>
+
+  <p><em>Publicações científicas, projetos detalhados e colaborações serão listados aqui em breve.</em></p>
 </section>
 {% endblock %}
