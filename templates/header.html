@@ -1,11 +1,24 @@
 {% if is_home %}
 <header class="perfil-container">
-  <img src="{{ assets_prefix }}img/foto-perfil-mauroreis.webp" alt="Foto de Mauro" class="foto-perfil">
+  {#
+    Adicione os atributos width e height à tag img.
+    Substitua "150" pela largura e altura reais da sua imagem foto-perfil-mauroreis.webp.
+    Manter a proporção correta é crucial. Se a sua imagem não for quadrada,
+    ajuste os valores de width e height para corresponderem à proporção original da imagem.
+  #}
+  <img 
+    src="{{ assets_prefix }}img/foto-perfil-mauroreis.webp" 
+    alt="Foto de Mauro" 
+    class="foto-perfil"
+    width="614"  {# Substitua pelo valor real da largura da imagem #}
+    height="410" {# Substitua pelo valor real da altura da imagem #}
+    style="aspect-ratio: 614 / 410;" {# Opcional, mas bom para manter a proporção se o CSS interferir #}
+  >
   <div class="perfil-info">
     <h1>Mauro Sandro dos Reis</h1>
+    {# Modifiquei o texto aqui para corresponder ao que parece ser o conteúdo da sua página inicial renderizada #}
     <p>Pesquisador, Professor e Engenheiro | Eletrônica de Potência</p>
     <p>Email: <a href="mailto:mauro@mauroreis.app">mauro@mauroreis.app</a></p>
-
   </div>
 </header>
 {% else %}
@@ -18,4 +31,5 @@
   <a href="{{ nav_prefix }}ensino/index.html" {% if current_page == 'ensino' %}class="active"{% endif %}>Ensino</a>
   <a href="{{ nav_prefix }}pesquisa/index.html" {% if current_page == 'pesquisa' %}class="active"{% endif %}>Pesquisa</a>
   <a href="{{ nav_prefix }}extensao/index.html" {% if current_page == 'extensao' %}class="active"{% endif %}>Extensão</a>
+  {# Considere adicionar outras páginas importantes aqui, como Eletrônica de Potência, se fizer sentido na navegação principal #}
 </nav>
